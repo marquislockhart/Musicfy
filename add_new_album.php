@@ -31,19 +31,20 @@
         <li><a href="album_catalog.php">Albums</a></li>
       </ul>
     </li>
-    <li><a href="playlist.php">My Playlist</a></li>
   </ul>
 </div>
 </nav>
     <body>
       <h1>Add a New Album</h1>
-        <form action = "album_values.php" method="post">
+        <form name="frmImage" enctype="multipart/form-data" action = "album_values.php" method="post" class="frmImageUpload">
             Album Name: <input type = "text" name = "name"><br>
             Artist(ID): <input type = "text" name = "artist"><br>
             Release Year: <input type = "text" name = "release_year"><br>
             Genre: <input type = "text" name = "genre"><br>
             Run Time: <input type = "text" name = "run_time"><br>
-            <input type = 'submit'></input>
+            <label>Upload Image File:</label><br /> <input name="userImage"
+                type="file" class="inputFile" />
+            <input type = 'submit' value="Submit" class="btnSubmit"></input>
         </form>
     </body>
 

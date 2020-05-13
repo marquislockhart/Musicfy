@@ -31,19 +31,19 @@
         <li><a href="album_catalog.php">Albums</a></li>
       </ul>
     </li>
-    <li><a href="playlist.php">My Playlist</a></li>
   </ul>
 </div>
 </nav>
 <body>
   <h1>Add a New Song</h1>
-    <form action = "song_values.php" method="post">
+    <form action = "song_values.php" method="post" enctype="multipart/form-data">
         Song Name: <input type = "text" name = "name"><br>
         Artist: <input type = "text" name = "artist"><br>
         Album: <input type = "text" name = "album"><br>
         Run Time: <input type = "text" name = "run_time"><br>
         Explicit: <input type = "text" name = "explicit"><br>
-        <input type = 'submit'></input>
+        <input type="file" name="audioFile"/>
+        <input type="submit" value="Upload Audio" name="save_audio"/>
     </form>
     </body>
 </html>

@@ -1,6 +1,7 @@
 <!-- webpage to add new artist into database -->
 <html>
 <!-- Bootstrap Navbar -->
+<link href="imageStyles.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
@@ -33,16 +34,17 @@
         <li><a href="album_catalog.php">Albums</a></li>
       </ul>
     </li>
-    <li><a href="playlist.php">My Playlist</a></li>
   </ul>
 </div>
 </nav>
 <body>
   <h1>Add a New Artist</h1>
-    <form action = "artist_values.php" method="post">
+    <form name="frmImage" enctype="multipart/form-data" action = "artist_values.php" method="post" class="frmImageUpload">
         Artist Name: <input type = "text" name = "name" required><br>
         Bio <textarea cols="40" rows="5 "name = "bio"></textarea>
-        <input type = 'submit'></input>
+        <label>Upload Image File:</label><br /> <input name="userImage"
+            type="file" class="inputFile" />
+        <input type = 'submit' value="Submit" class="btnSubmit"></input>
     </form>
     </body>
 </html>
